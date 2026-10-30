@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting… — Link Hub</title>
+  <meta name="description" content="Opening your link in an external browser after a short preview." />
+  <meta property="og:title" content="Redirecting… — Link Hub" />
+  <meta property="og:description" content="Opening your link in an external browser after a short preview." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="redirect-backdrop">
+    <!-- পুরো পেজ জুড়ে ভাসমান GIF পার্টিকেল (JS এগুলো বানায়) -->
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <div class="center-wrap">
+      <div class="card">
+        <p class="eyebrow">Secure Redirect</p>
+        <h1>লিংক খোলা হচ্ছে…</h1>
+        <p class="sub">Opening your link in an external browser</p>
+
+        <div class="ring-wrap">
+          <svg viewBox="0 0 100 100" class="ring">
+            <circle class="ring-track" cx="50" cy="50" r="44" />
+            <circle id="ringProgress" class="ring-fill" cx="50" cy="50" r="44" />
+          </svg>
+          <span id="countdown">5</span>
+        </div>
+
+        <!-- Auto redirect না খুললে এই fallback বাটন দেখা যাবে -->
+        <div id="fallback" class="fallback hidden">
+          <p>নতুন ব্রাউজার না খুললে নিচের বাটনে চাপ দিন</p>
+          <button id="openNow" type="button">এখনই খুলুন →</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
